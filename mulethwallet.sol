@@ -151,7 +151,7 @@ contract MultiSigWallet {
     function deleteTransaction(uint transactionId) validOwner public {
         //to delete from a dynamic array we need to delete the element from array and reshuffle the array
         uint8 replace = 0;
-        for(uint i = 0; i < _pendingTransactions[i];i++){
+        for(uint i = 0; i < _pendingTransactions.length;i++){
             if (transactionId == _pendingTransactions[i]) {
                 replace = 1;
                 _pendingTransactions[i-1] = _pendingTransactions[i];
