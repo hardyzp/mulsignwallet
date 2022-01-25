@@ -172,6 +172,6 @@ contract MultiSigWallet {
     
     //
     function walletBalance() view public returns (uint) {
-        return address(this).balance;
+        return wowToken.balanceOf(address(this));
     }
 }
